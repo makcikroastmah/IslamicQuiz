@@ -20,8 +20,9 @@ p  {
    #h1 {
     text-align: center
    }
-   #startbutton {
-       text-align: center
+   .startbuttondiv {
+    text-align: center ;
+    padding-bottom: 20px ;
    }
    #navfrst {
     font-family: 'Raleway', sans-serif;
