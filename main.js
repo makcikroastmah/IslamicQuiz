@@ -142,7 +142,10 @@ function printH1s() {
     divForH1.innerHTML += `
             <div>
                 <button id='finish' onclick="finish()" type="button" class="btn btn-outline-danger">Finish</button> 
+                <p id="finishbtn">Press finish to calculate results</p>
+
             </div>
+            
         `;
 }
 
@@ -155,6 +158,22 @@ function finish() {
         numberOfCorrectAns += 1 
       }  
     }
-    document.getElementById('finishbtn').innerHTML= 'You got ' + numberOfCorrectAns + '/15 .Congrats';
+    document.getElementById('finishbtn').innerHTML= 'You got ' + numberOfCorrectAns + '/15. '  + outputMessage(numberOfCorrectAns);
+
+}
+
+function outputMessage(score) {
+    if (score >= 10) {
+        return "Congrats"
+    }
+    else if (score >= 7) {
+        return "Good Job"
+    }
+    else if (score >= 0) {
+        return "Try Again"
+    }
+    else {
+        return ""
+    }
 }
 
